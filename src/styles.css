@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.app {
+    display: flex;
+}
+.sidebar {
+    width: 30%;
+    background-color: lightgray;
+    padding: 20px;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+}
+.main {
+    width: 70%;
+    padding: 5px;
+    overflow: auto;
+}
+.sidebar-item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    color: black;
+    margin-top: 2px;
+}
+.sidebar-item:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+ul {
+    list-style: none;
+}
+nav h3 {
+    margin: 0 3px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav h3:hover {
+    color: red;
+}
+nav.nav-bar {
+    background-color: black;
+}
+div.nav-bar-container {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
