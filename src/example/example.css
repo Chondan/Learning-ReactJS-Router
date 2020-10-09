@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul.nav-bar {
+    list-style: none;
+    display: flex;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+ul.nav-bar li {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+}
+.blog-main-page {
+    display: flex;
+}
+.blog-main-page>div {
+    padding: 10px;
+}
+.blog-form {
+    width: 40%;
+}
+.blog-description {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.blog-lists {
+    margin: 20px 0;
+    padding: 5px;
+    height: 60vh;
+    overflow: auto;
+}
+.blog-list {
+    box-shadow: 1px 1px 2px black;
+    padding: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: white;
+    transform: translateY(var(--translateAtHover, 0));
+    transition: transform 150ms;
+    color: black;
+    word-wrap: break-word;
+}
+.blog-list:hover {
+    --translateAtHover: -2px;
+    filter: brightness(0.9);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.selected {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.blog-description .control {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px;
+}
+.blog-description .control button {
+    padding: 5px;
+    margin: 2px;
+}
+.blog-form textarea {
+    height: 100px;
+}
+.blog-form textarea,
+.blog-form input {
+    padding: 5px;
+}
+.blog-description .main div {
+    word-wrap: break-word;
+    text-indent: 5%;
+}
+.editing {
+    border: 1px dashed black;
+    outline: none;
+    margin: 4px;
+}

@@ -19,7 +19,7 @@ export function Sidebar(props) {
 
 export function SidebarItem(props) {
     return (
-        <Link
+        <Link style={{ textDecoration: "none" }}
             to={`/gists/${props.gist.id}`}
         >
             <div title={props.gist.description} className="sidebar-item">{props.gist.description || "no description"}</div>

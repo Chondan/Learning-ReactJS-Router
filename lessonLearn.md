@@ -14,6 +14,8 @@ There are 3 main parts componet
    - like &lt;a&gt; in html
    - `<Link to={"/g/:gistId"}><Component /></Link>`
 
+> Note: If you want to set the style of element covered by Link Component, you have to set the style prop in Link Component instead.
+
 ## CSS 
 ### sidebar-item
 - whitespace: nowrap;
@@ -31,3 +33,5 @@ There are 3 main parts componet
 - fetch api from (non json url like protocal://domain/path/endpoint.txt)
 - use method `res.text()` instead of res.json() while fetching the data
   
+## ContentEditable Component
+`npm install react-contenteditable`
