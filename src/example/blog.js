@@ -105,7 +105,9 @@ function BlogDescription({ blogList, editBlog }) {
                 />
             </div>
             <div className="control">
+            <Link to="/blogs">
                 <button onClick={() => deleteBlogFunc(blogList.id)}>DELETE</button>
+            </Link>
                 <button onClick={handleClickEdit}>{isEditing ? "SAVE" : "EDIT"}</button>
             </div>
         </div>
