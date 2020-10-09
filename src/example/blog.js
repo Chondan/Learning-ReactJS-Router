@@ -48,7 +48,7 @@ function BlogForm({ blogLists, addNewBlogList }) {
             </form>
             <div className="blog-lists">
                 {blogLists.map(blogList => (
-                    <Link style={{ textDecoration: "none" }} key={blogList.id} to={`/blogs/${blogList.id}`}>
+                    <Link style={{ textDecoration: "none" }} key={blogList.id} to={`/Learning-ReactJS-Router/blogs/${blogList.id}`}>
                         <BlogList blogList={blogList} />
                     </Link>
                 ))}
@@ -105,7 +105,7 @@ function BlogDescription({ blogList, editBlog }) {
                 />
             </div>
             <div className="control">
-            <Link to="/blogs">
+            <Link to="/Learning-ReactJS-Router/blogs">
                 <button onClick={() => deleteBlogFunc(blogList.id)}>DELETE</button>
             </Link>
                 <button onClick={handleClickEdit}>{isEditing ? "SAVE" : "EDIT"}</button>
@@ -168,7 +168,7 @@ export default function Blogs() {
                     blogLists={blogLists} 
                     addNewBlogList={addNewBlogList}
                 />
-                <Route path="/blogs/:blogId" render={(({ match }) => <BlogDescription editBlog={editBlog} blogList={blogLists.find(blog => blog.id === match.params.blogId)} />)} />
+                <Route path="/Learning-ReactJS-Router/blogs/:blogId" render={(({ match }) => <BlogDescription editBlog={editBlog} blogList={blogLists.find(blog => blog.id === match.params.blogId)} />)} />
             </deleteBlogContext.Provider>
             </div>
         </>

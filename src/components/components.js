@@ -20,7 +20,7 @@ export function Sidebar(props) {
 export function SidebarItem(props) {
     return (
         <Link style={{ textDecoration: "none" }}
-            to={`/gists/${props.gist.id}`}
+            to={`/Learning-ReactJS-Router/gists/${props.gist.id}`}
         >
             <div title={props.gist.description} className="sidebar-item">{props.gist.description || "no description"}</div>
         </Link>
@@ -84,11 +84,11 @@ export class GistsPage extends React.Component {
                     }
                 </Sidebar>
                 <Main>
-                    <Route exact={true} path="/gists" render={() => (
+                    <Route exact={true} path="/Learning-ReactJS-Router/gists" render={() => (
                         <NavElem type="Welcome" />
                     )} />
                     {this.state.gists && (
-                        <Route path="/gists/:gistId" render={({ match }) => 
+                        <Route path="/Learning-ReactJS-Router/gists/:gistId" render={({ match }) => 
                             <GistComponent gist={this.state.gists.find(g => g.id === match.params.gistId)} />} 
                         />
                     )}

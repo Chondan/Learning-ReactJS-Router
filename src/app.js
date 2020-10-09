@@ -19,10 +19,10 @@ class App extends React.Component {
         return (
             <Router>
                 <NavLinks />
-                <Route exact={true} path="/" render={() => <NavElem type="Home" />}/>
-                <Route path="/gists" component={GistsPage} />
-                <Route path="/about" render={() => <NavElem type="About" />} />
-                <Route path="/blogs" component={Blogs} />
+                <Route exact={true} path="/Learning-ReactJS-Router" render={() => <NavElem type="Home" />}/>
+                <Route path="/Learning-ReactJS-Router/gists" component={GistsPage} />
+                <Route path="/Learning-ReactJS-Router/about" render={() => <NavElem type="About" />} />
+                <Route path="/Learning-ReactJS-Router/blogs" component={Blogs} />
             </Router>
         );
     }
@@ -32,10 +32,10 @@ function NavLinks() {
     return (
         <div className="nav-bar-container">
             <nav className="nav-bar" style={{ display: "flex" }}>
-                <Link style={{ textDecoration: "none" }} to="/"><h3>Home</h3></Link>
-                <Link style={{ textDecoration: "none" }} to="/about"><h3>About</h3></Link>
-                <Link style={{ textDecoration: "none" }} to="/gists"><h3>gists</h3></Link>
-                <Link style={{ textDecoration: "none" }} to="/blogs"><h3>Blogs</h3></Link>
+                <Link style={{ textDecoration: "none" }} to="/Learning-ReactJS-Router"><h3>Home</h3></Link>
+                <Link style={{ textDecoration: "none" }} to="/Learning-ReactJS-Router/about"><h3>About</h3></Link>
+                <Link style={{ textDecoration: "none" }} to="/Learning-ReactJS-Router/gists"><h3>gists</h3></Link>
+                <Link style={{ textDecoration: "none" }} to="/Learning-ReactJS-Router/blogs"><h3>Blogs</h3></Link>
             </nav>
         </div>
     );
